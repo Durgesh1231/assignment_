@@ -1,0 +1,322 @@
+                    Assignment on Exception handling
+
+Ans 1.
+
+Java is one of the popular programming languages used for developing various applications, ranging 
+from mobile apps to enterprise software. As with any programming language, errors can occur in Java code, 
+leading to unexpected behaviour or program failures.
+
+types of error in java-:
+There are several types of errors that occur in Java, including syntax errors, runtime errors, and logical errors. They are
+
+1.Syntax Errors or Compilation Errors: These occur when the code violates the rules of the Java syntax. These errors are usually caught by the Java compiler during the compilation phase.
+ 
+2.Runtime Errors: These errors occur when the code encounters an unexpected behaviour during its execution. These errors are usually caused by flawed logic or incorrect assumptions in the code and can be difficult to identify and fix.
+ 
+3.Logical Errors: These occur when the program is executing correctly, but the result is not what was intended. These errors can be difficult to identify and fix, as the program is running correctly but producing unintended results.
+ 
+4.Linking Errors: Linking errors occur when the Java Virtual Machine (JVM) tries to link a class file during runtime but encounters a problem. This can happen if a required class or library is missing, or if there is a problem with the syntax or format of the code. 
+ 
+5.Class Loading Errors: Class loading errors occur when the JVM attempts to load a class into memory but encounters a problem. This can happen if the class file is missing or corrupted, or if there is a problem with the classpath.
+
+
+Ans 2.
+
+Exception is an unwanted or unexpected event, which occurs during the execution of a program, i.e. at run time, that disrupts the normal flow of the program’s instructions. Exceptions can be caught and handled by the program. When an exception occurs within a method, it creates an object. This object is called the exception object. It contains information about the exception, such as the name and description of the exception and the state of the program when the exception occurred.
+
+Ans 3.
+
+it is important to handle exceptions. Here's a list of different approaches to handle exceptions in Java.
+a) try...catch block
+
+class Main {
+  public static void main(String[] args) {
+
+    try {
+
+      // code that generate exception
+      int divideByZero = 5 / 0;
+      System.out.println("Rest of code in try block");
+    }
+    
+    catch (ArithmeticException e) {
+      System.out.println("ArithmeticException => " + e.getMessage());
+    }
+  }
+}
+
+
+b) finally block
+
+class Main {
+  public static void main(String[] args) {
+    try {
+      // code that generates exception
+      int divideByZero = 5 / 0;
+    }
+
+    catch (ArithmeticException e) {
+      System.out.println("ArithmeticException => " + e.getMessage());
+    }
+    
+    finally {
+      System.out.println("This is the finally block");
+    }
+  }
+}
+
+c) throw and throws keyword
+ 
+class Main {
+  public static void divideByZero() {
+
+    // throw an exception
+    throw new ArithmeticException("Trying to divide by 0");
+  }
+
+  public static void main(String[] args) {
+    divideByZero();
+  }
+}
+
+
+Ans 4.
+
+a).Ensures the Continuity of the Program.
+b).Enhances the Robustness of the Program.
+c).Improves the Readability & Maintainability of the Code.
+d).Allows for more Accurate Error Reporting.
+e).Provides a Better user Experience.
+f).Facilitates Debugging and Troubleshooting.
+
+Ans 5.
+
+Error 
+Errors are usually caused by serious problems that are outside the control of the program, such as running out of memory or a system crash. Errors are represented by the Error class and its subclasses. Some common examples of errors in Java include:
+
+a) OutOfMemoryError: Thrown when the Java Virtual Machine (JVM) runs out of memory.
+b) StackOverflowError: Thrown when the call stack overflows due to too many method invocations.
+c) NoClassDefFoundError: Thrown when a required class cannot be found.
+
+Exception
+Exceptions, on the other hand, are used to handle errors that can be recovered from within the program. Exceptions are 
+represented by the Exception class and its subclasses. Some common examples of exceptions in Java include:
+
+a) NullPointerException: Thrown when a null reference is accessed.
+b) IllegalArgumentException: Thrown when an illegal argument is passed to a method.
+c) IOException: Thrown when an I/O operation fails.
+
+Ans 6.
+
+there are two type of exception in java
+a) built-in exception                b) user-defined Exception
+
+example of  built-in exception-:
+ArithmeticException
+ArrayIndexOutOfBoundsException
+NullPointerException
+RuntimeException
+StringIndexOutOfBoundsException
+
+example of user-defined exception-:
+A. Arithmetic exception
+B. NullPointer Exception
+C. StringIndexOutOfBound Exception
+D. ArrayIndexOutOfBounds Exception
+
+Ans 7.
+Yes...
+
+                         Assignment on Lambda Expression
+
+Ans 1.
+
+Lambda Expressions were added in Java 8.
+
+A lambda expression is a short block of code which takes in parameters and returns a value. 
+Lambda expressions are similar to methods, but they do not need a name and they can be implemented 
+right in the body of a method.
+
+Ans 2.
+
+The Lambda expression is used to provide the implementation of an interface which has functional interface. 
+It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. 
+
+
+Ans 3.
+
+Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional interface.
+
+Ans 4.
+
+a). To provide the implementation of Functional interface.
+b). Less coding.
+
+Ans 5.
+
+No,
+lambda has zero parameter
+Syntax,
+
+() -> {  
+//Body of no parameter lambda  
+} 
+
+
+
+                         Assignment on Interface
+
+
+Ans 1.
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not the method body. It is used to achieve abstraction and multiple inheritances in Java using Interface. In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body. Java Interface also represents the IS-A relationship.
+
+Ans 2.
+
+In Java, methods and data members can be encapsulated by the following four access modifiers. The access modifiers are listed according to their restrictiveness order. 
+1) private (accessible within the class where defined) 
+2) default or package-private (when no access modifier is specified) 
+3) protected (accessible only to classes that subclass your class directly within the current or different package)
+4) public (accessible from any class)
+
+Ans 3.
+
+Abstraction is achieved using an Interface in Java.
+To achieve loose coupling.
+Supports the functionality of multiple inheritances in Java.
+
+
+Ans 4.
+
+Abstract class-:
+a).Cannot be instantiated: Abstract classes cannot be directly instantiated, which means you cannot create 
+   objects of an abstract class.
+b).Can contain both abstract and non-abstract methods: Abstract classes can have both abstract and non-abstract methods. 
+  Non-abstract methods have a complete implementation and can be called directly.
+c).Can have constructors and destructors: Abstract classes can have constructors and destructors like any other class.
+d).Can have member variables: Abstract classes can have member variables, which are variables that belong to an object of the class.
+
+Interface class 
+a).Defines a set of methods and properties: An interface defines a set of methods and properties that must be 
+   implemented by any class or structure that implements the interface.
+b).Provides a common protocol: Interfaces provide a common protocol that allows different software components to
+   communicate with each other.
+c).mproves code reusability: Interfaces improve code reusability by allowing different software components to 
+   reuse the same code base, as long as they implement the same interface.
+d).Facilitates testing: Interfaces facilitate testing by allowing software components to be tested independently 
+   of each other, using mock objects that implement the interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
